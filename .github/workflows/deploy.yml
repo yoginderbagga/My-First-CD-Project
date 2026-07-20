@@ -3,7 +3,8 @@ name: Simple-Deployment-Pipeline
 # Trigger this whenever we push to the 'main' branch
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - feature
 
 jobs:
   build-and-deploy:
