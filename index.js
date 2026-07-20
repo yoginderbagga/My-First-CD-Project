@@ -8,6 +8,7 @@ http.createServer((req, res) => {
   res.write('<h2> Whats up CICD Pipeline - Update 20th July, 2026...hey update 2</h2>');
   res.write('<h2> Added from the self-hosted runner Hi</h2>');
   res.write('<p>Status: Online</p>');
+ res.write('<h2> from Self-hosted again </h2>');
   res.end(); 
 }).listen(80); // The server listens on port 80 (standard HTTP)
 
