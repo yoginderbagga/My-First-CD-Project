@@ -3,8 +3,8 @@ name: Simple-Deployment-Pipeline
 # Trigger this whenever we push to the 'main' branch
 on:
   schedule:
-    # Runs at 15:30PM IST every single day
-    - cron: '0 10 * * *'
+    # Runs at 15:40PM IST every single day
+    - cron: '10 10 * * *'
 
   push: 
     branches:
