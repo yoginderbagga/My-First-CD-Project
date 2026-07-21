@@ -6,7 +6,7 @@ http.createServer((req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>CI/CD Pipeline Demo</title>
+        <title>CI/CD Pipeline Demo with GitHub Runner</title>
         <style>
             body {
                 margin: 0;
