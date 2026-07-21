@@ -4,7 +4,7 @@ name: Simple-Deployment-Pipeline
 on:
   push:
     branches: 
-      - feature
+      - main
 
 jobs:
   build-and-deploy:
