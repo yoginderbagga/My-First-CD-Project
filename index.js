@@ -2,6 +2,7 @@ const http = require('http');
 
 http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/html'}); 
+
   res.end(`
     <!DOCTYPE html>
     <html>
@@ -77,6 +78,24 @@ http.createServer((req, res) => {
             <div class="status">
                 ✅ Application Online
             </div>
+
+	    <hr style="margin:30px 0; border:none; border-top:1px solid #ddd;">
+
+<div style="
+    background:#e3f2fd;
+    border-left:5px solid #1976d2;
+    padding:15px;
+    border-radius:8px;
+    margin-top:20px;">
+
+    <h3 style="margin-top:0;">✨ New Feature</h3>
+
+    <p>
+        Added a deployment information panel from the
+        <strong>feature</strong> branch.
+    </p>
+
+</div>
 
             <footer>
                 Automatically deployed using GitHub Actions & Docker
