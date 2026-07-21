@@ -1,18 +1,94 @@
 const http = require('http');
 
-// Create a server object
 http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/html'}); 
-  res.write('<h1> Mentor Checkpoint: My CI/CD Pipeline is Working!</h1>');
-  res.write('<h1> Making changes on this file to see if it immediately pushes live with CICD magic!</h1>');
-  res.write('<h2>🌿 Feature Branch Deployment Successful!</h2>');
-res.write('<p>Branch: feature/cicd-test</p>');
-res.write('<p>Deployment Time: 20 July 2026</p>');
-  res.write('<h2> Added from the self-hosted runner Hi</h2>');
-  res.write('<p>Status: Online</p>');
- res.write('<h2> from Self-hosted again </h2>');
- res.write('<h2> Second update from feature</h2>');
-  res.end(); 
-}).listen(80); // The server listens on port 80 (standard HTTP)
 
-console.log('Server is running on port 80...');
+  res.end(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>CI/CD Pipeline Demo with GitHub Runner</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #f4f6f9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .card {
+                background: white;
+                width: 550px;
+                padding: 35px;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+                text-align: center;
+            }
+
+            h1 {
+                color: #2c3e50;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: #27ae60;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #555;
+                font-size: 17px;
+                margin: 10px 0;
+            }
+
+            .status {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 18px;
+                background: #28a745;
+                color: white;
+                border-radius: 20px;
+                font-weight: bold;
+            }
+
+            footer {
+                margin-top: 30px;
+                color: #777;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="card">
+            <h1>🚀 CI/CD Pipeline Demo</h1>
+
+            <h2>Deployment Successful!</h2>
+
+            <p><strong>Repository:</strong> My-First-CD-Project</p>
+
+            <p><strong>Branch:</strong> feature/cicd-test</p>
+
+            <p><strong>Platform:</strong> GitHub Actions (Self-Hosted Runner)</p>
+
+            <div class="status">
+                ✅ Application Online
+            </div>
+
+            <footer>
+                Automatically deployed using GitHub Actions & Docker
+            </footer>
+
+        </div>
+
+    </body>
+    </html>
+    `);
+
+}).listen(80);
+
+console.log("Server is running on port 80...");
