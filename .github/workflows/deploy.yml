@@ -20,6 +20,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # Step 2: Display Trigger (Debug)
+      - name: Display Trigger
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          date
+
       # Step 2: Build the Docker Image
       - name: Build Docker Image
         run: docker build -t simple-app-image .
