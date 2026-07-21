@@ -98,7 +98,7 @@ http.createServer((req, res) => {
 </div>
 
             <footer>
-                Automatically deployed using GitHub Actions & Docker ( This added at 3:50 PM IST with schedule Trigger)
+                Automatically deployed using GitHub Actions & Docker ( Schedule deployment test - 16-48 IST)
             </footer>
 
         </div>

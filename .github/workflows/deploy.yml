@@ -4,7 +4,7 @@ name: Simple-Deployment-Pipeline
 on:
   schedule:
     # Runs at 15:40PM IST every single day
-    - cron: '40 10 * * *'
+    - cron: '48 10 * * *'
 
   push: 
     branches:
