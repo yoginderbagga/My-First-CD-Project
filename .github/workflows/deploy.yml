@@ -6,7 +6,7 @@ on:
 
   schedule:
     # Runs at 15:40PM IST every single day
-    - cron: '40 15 * * *'
+    - cron: '19 15 * * *'
 
  #  push: 
   #  branches:
