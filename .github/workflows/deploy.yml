@@ -2,11 +2,11 @@ name: Simple-Deployment-Pipeline
 
 # Trigger this whenever we push to the 'main' branch
 on:
-  workflow_dispatch:
+  
 
   schedule:
     # Runs at 15:40PM IST every single day
-    - cron: '*/5 * * * *'
+    - cron: '34 15 * * *'
 
   push: 
     branches:
