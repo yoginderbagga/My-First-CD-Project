@@ -4,7 +4,7 @@ name: Simple-Deployment-Pipeline
 on:
   schedule:
     # Runs at 15:40PM IST every single day
-    - cron: '24 15 * * *'
+    - cron: '46 15 * * *'
 
  #  push: 
   #  branches:
@@ -19,6 +19,17 @@ jobs:
       # Step 1: Pull the latest code from this GitHub Repo
       - name: Checkout Code
         uses: actions/checkout@v4
+
+
+        - name: Debug Information
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Workflow SHA: ${{ github.sha }}"
+          echo "UTC Time:"
+          date -u
+          echo "Runner Local Time:"
+          date
 
       # Step 2: Display Trigger (Debug)
       - name: Display Trigger
