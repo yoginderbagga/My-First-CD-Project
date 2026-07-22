@@ -6,11 +6,11 @@ on:
 
   schedule:
     # Runs at 15:40PM IST every single day
-    - cron: '34 15 * * *'
+    - cron: '40 15 * * *'
 
-  push: 
-    branches:
-      - main
+ #  push: 
+  #  branches:
+      #- main
 
 jobs:
   build-and-deploy:
