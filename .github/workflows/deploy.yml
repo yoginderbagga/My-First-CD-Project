@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
 
-        - name: Debug Information
+      - name: Debug Information
         run: |
           echo "Triggered by: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref }}"
