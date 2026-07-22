@@ -2,9 +2,10 @@ name: Simple-Deployment-Pipeline
 
 # Trigger this whenever we push to the 'main' branch
 on:
+  workflow_dispatch:
   schedule:
     # Runs at 15:40PM IST every single day
-    - cron: '46 15 * * *'
+    - cron: '52 15 * * *'
 
  #  push: 
   #  branches:
@@ -31,12 +32,7 @@ jobs:
           echo "Runner Local Time:"
           date
 
-      # Step 2: Display Trigger (Debug)
-      - name: Display Trigger
-        run: |
-          echo "Triggered by: ${{ github.event_name }}"
-          echo "Branch: ${{ github.ref }}"
-          date
+      
 
       # Step 2: Build the Docker Image
       - name: Build Docker Image
